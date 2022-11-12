@@ -19,7 +19,7 @@ function logger (){
 function mountPartitionToFolder (){
 	PARTITION=$1 ; FOLDER=$2
 	# Si existiese desmonta el punto de montaje.
-	sudo umount $FOLDER
+	sudo umount $FOLDER &>/dev/null
 	# Monta en una determinada carpeta el punto de montaje.
 	echo "Montando particion $PARTITION en $FOLDER"
 	sudo mount $PARTITION $FOLDER
