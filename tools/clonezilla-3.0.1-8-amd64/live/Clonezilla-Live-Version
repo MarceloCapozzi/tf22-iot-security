@@ -1,3 +1,0 @@
-clonezilla-live-3.0.1-8-amd64
-This Clonezilla live iso file was created by this command:
-ocs-iso -s --extra-boot-param quiet loglevel=0 -y 6.03 -i 3.0.1-8-amd64
