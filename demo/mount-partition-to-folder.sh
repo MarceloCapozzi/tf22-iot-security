@@ -25,8 +25,6 @@ function mountPartitionToFolder (){
 	sudo mount $PARTITION $FOLDER
 	# Comprobacion del resultado de la operacion.
 	if [ $? -ne 0 ]; then logger 1 "Error: Montando particion \"$PARTITION\" en \"$FOLDER\""; fi
-	# Abre el navegador de archivos mostrando el contenido del punto de montaje.
-	nautilus $FOLDER
 }
 
 # Comprobacion de la particion de "boot"
@@ -48,5 +46,8 @@ mountPartitionToFolder $BOOT_PARTITION $BASEDIR_PATH/$BOOT_STR
 
 # Monta la particion de "rootfs"
 mountPartitionToFolder $ROOTFS_PARTITION $BASEDIR_PATH/$ROOTFS_STR
+
+# Abre el navegador de archivos mostrando el contenido de los puntos de montaje.
+nautilus {$BASEDIR_PATH/$BOOT_STR,$BASEDIR_PATH/$ROOTFS_STR}
 
 echo "Finalizo el proceso de configuracion."
