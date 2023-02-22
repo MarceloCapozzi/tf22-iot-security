@@ -1,0 +1,4 @@
+tools/clonezilla-3.0.1-8-amd64/live/filesystem.squashfs filter=lfs diff=lfs merge=lfs -text
+images/2022-04-04-raspios-bullseye-arm64-lite.img.xz filter=lfs diff=lfs merge=lfs -text
+tools/nessus/nessus-10.4.1-ubuntu1404_amd64.deb filter=lfs diff=lfs merge=lfs -text
+tools/nessus/nessus-10.4.1-raspberrypios_armhf.deb filter=lfs diff=lfs merge=lfs -text
